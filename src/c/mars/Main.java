@@ -26,8 +26,9 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9).stream()
-                .filter(x -> x>4&&x<8)
-                .forEach(System.out::println);
+        System.out.println(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9).stream()
+                .filter(x -> x > 4 && x < 8)
+                .reduce(0, (a, b) -> a + b)); //sum
+//                .forEach(System.out::println); //print each
     }
 }
